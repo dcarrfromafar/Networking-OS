@@ -1,0 +1,7 @@
+MIN_short                      FAIL (see outputs/MIN_short.diff for details)
+MIN_longer                     FAIL (see outputs/MIN_longer.diff for details)
+MIN_invalid                    FAIL (see outputs/MIN_invalid.diff for details)
+FULL_short                     FAIL (see outputs/FULL_short.diff for details)
+FULL_longer                    FAIL (see outputs/FULL_longer.diff for details)
+FULL_invalid                   FAIL (see outputs/FULL_invalid.diff for details)
+No memory leak found.

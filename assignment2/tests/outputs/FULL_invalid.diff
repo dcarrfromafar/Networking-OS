@@ -1,0 +1,9 @@
+--- outputs/FULL_invalid.txt	2025-01-30 17:10:01.211974507 -0500
++++ expected/FULL_invalid.txt	2020-01-20 15:21:07.000000000 -0500
+@@ -10,5 +10,5 @@
+ BLK.KILL -> TRM
+ 
+   Process stats:
+-    runtime: 0
++    runtime: 1
+     normal exit: false

@@ -1,0 +1,10 @@
+--- outputs/FULL_short.txt	2025-01-30 17:10:00.507967680 -0500
++++ expected/FULL_short.txt	2020-01-20 15:21:07.000000000 -0500
+@@ -4,5 +4,5 @@
+ RUN.EXIT -> TRM
+ 
+   Process stats:
+-    runtime: 0
+-    normal exit: false
++    runtime: 1
++    normal exit: true

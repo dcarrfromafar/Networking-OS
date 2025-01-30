@@ -1,0 +1,22 @@
+==32962== Memcheck, a memory error detector
+==32962== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==32962== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==32962== Command: ../fsm 0 1 5
+==32962== 
+NEW.ADMIT -> RDY
+  [Process is live]
+RDY.DISPATCH -> RUN
+RUN.EXIT -> TRM
+
+  Process stats:
+    runtime: 0
+    normal exit: false
+==32962== 
+==32962== HEAP SUMMARY:
+==32962==     in use at exit: 0 bytes in 0 blocks
+==32962==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==32962== 
+==32962== All heap blocks were freed -- no leaks are possible
+==32962== 
+==32962== For lists of detected and suppressed errors, rerun with: -s
+==32962== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
