@@ -5,8 +5,18 @@ RDY.DISPATCH -> RUN
 RUN.EXIT -> TRM
 
   Process stats:
-    runtime: 0
-    normal exit: false
+    runtime: 1
+    normal exit: true
+  [Process is live]
+  [Process is live]
+NEW.ADMIT -> RDY
+  [Process is live]
+RDY.DISPATCH -> RUN
+RUN.EXIT -> TRM
+
+  Process stats:
+    runtime: 1
+    normal exit: true
 NEW.ADMIT -> RDY
   [Process is live]
 RDY.BLOCK -> BLK
@@ -19,8 +29,8 @@ RUN.DISPATCH -> RUN
 RUN.EXIT -> TRM
 
   Process stats:
-    runtime: 0
-    normal exit: false
+    runtime: 3
+    normal exit: true
 NEW.ADMIT -> RDY
   [Process is live]
 RDY.DISPATCH -> RUN
@@ -29,12 +39,42 @@ RUN.KILL -> NST
 RUN.EXIT -> TRM
 
   Process stats:
-    runtime: 0
+    runtime: 1
+    normal exit: true
+NEW.ADMIT -> RDY
+  [Process is live]
+RDY.BLOCK -> BLK
+  [Process is blocked]
+BLK.UNBLOCK -> RDY
+  [Process is unblocked]
+RDY.DISPATCH -> RUN
+RUN.DISPATCH -> RUN
+RUN.DISPATCH -> RUN
+RUN.EXIT -> TRM
+
+  Process stats:
+    runtime: 3
+    normal exit: true
+NEW.ADMIT -> RDY
+  [Process is live]
+RDY.BLOCK -> BLK
+  [Process is blocked]
+BLK.UNBLOCK -> RDY
+  [Process is unblocked]
+RDY.BLOCK -> BLK
+  [Process is blocked]
+NEW.ADMIT -> RDY
+  [Process is live]
+RDY.BLOCK -> BLK
+  [Process is blocked]
+BLK.UNBLOCK -> RDY
+  [Process is unblocked]
+RDY.DISPATCH -> RUN
+RUN.DISPATCH -> RUN
+RUN.SCHEDULE -> RDY
+RDY.KILL -> TRM
+
+  Process stats:
+    runtime: 2
     normal exit: false
-40%: Checks: 10, Failures: 6, Errors: 0
-public.c:46:F:Public:FULL_set_live:0: Assertion 'fsm.live == 1' failed: fsm.live == 0, 1 == 1
-public.c:59:F:Public:FULL_kill_process:0: Assertion 'fsm.live == 1' failed: fsm.live == 0, 1 == 1
-public.c:79:F:Public:FULL_one_proc_linear:0: Assertion 'fsm.live == 1' failed: fsm.live == 0, 1 == 1
-private.c:79:F:Private:FULL_incr_runtime:0: Assertion 'fsm.runtime == 1' failed: fsm.runtime == 0, 1 == 1
-private.c:102:F:Private:FULL_no_changes:0: Assertion 'fsm.live == 1' failed: fsm.live == 0, 1 == 1
-private.c:132:F:Private:FULL_one_proc_valid_events:0: Assertion 'fsm.live == 1' failed: fsm.live == 0, 1 == 1
+100%: Checks: 10, Failures: 0, Errors: 0

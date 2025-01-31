@@ -25,6 +25,7 @@ static action_t const effects[NUMBER_OF_STATES][NUMBER_OF_EVENTS] = {
   { NULL,   		NULL,     NULL,     NULL,  say_unblocked, NULL, kill_proc, NULL }, // BLOCKED
   { NULL,   		NULL,     NULL,     NULL,  NULL,    			NULL, NULL, 		 NULL }  // TERM
 };
+
 // TODO: Create an array of action_t to map each state to its entry function
 //array of function pointers
 /* Lookup table for state entry actions */
@@ -42,8 +43,6 @@ transition(fsm_t *fsm, event_t event, action_t *effect, action_t *entry)
 {
   if(fsm -> state <= NST && event <= NIL)
   {
-  	/*set the entry and effect functions using the tables that you will 
-  	create in the TODOs above*/
   	state_t next = transitions[fsm -> state][event];
   	*entry = entries[next];
   	*effect = effects[fsm -> state][event];

@@ -9,5 +9,5 @@ RUN.NIL -> NST
 RUN.EXIT -> TRM
 
   Process stats:
-    runtime: 0
-    normal exit: false
+    runtime: 3
+    normal exit: true

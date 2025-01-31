@@ -7,12 +7,14 @@
 void
 reset_runtime (fsm_t *fsm)
 {
+	fsm -> runtime = 0;
 }
 
 /* Indicate the process is live */
 void
 set_live (fsm_t *fsm)
 {
+	fsm -> live = true;
   printf ("  [Process is live]\n");
 }
 
@@ -20,12 +22,14 @@ set_live (fsm_t *fsm)
 void
 kill_proc (fsm_t *fsm)
 {
+		fsm -> live = false;
 }
 
 /* Increment the run time counter by 1 */
 void
 incr_runtime (fsm_t *fsm)
 {
+	fsm -> runtime += 1;
 }
 
 /* Print the message that the process is blocked */

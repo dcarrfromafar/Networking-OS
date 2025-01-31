@@ -10,5 +10,5 @@ BLK.EXIT -> NST
 BLK.KILL -> TRM
 
   Process stats:
-    runtime: 0
+    runtime: 1
     normal exit: false

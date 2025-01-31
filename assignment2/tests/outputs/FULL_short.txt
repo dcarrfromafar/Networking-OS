@@ -4,5 +4,5 @@ RDY.DISPATCH -> RUN
 RUN.EXIT -> TRM
 
   Process stats:
-    runtime: 0
-    normal exit: false
+    runtime: 1
+    normal exit: true
