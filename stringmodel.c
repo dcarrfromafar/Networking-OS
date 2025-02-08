@@ -25,7 +25,7 @@ static strst_t const transitions[NSTR_STATES][NSTR_EVENTS] = {
 };
 
 // Then create a table of effect functions.
-static strst_t const transitions[NSTR_STATES][NSTR_EVENTS] = {
+static strst_t const effects[NSTR_STATES][NSTR_EVENTS] = {
 // OPEN_QUOTE       BACKSLAH  ESC_CHAR          NON_CTRL         CLOSE_QUOTE      NO_ESC       NIL_CHAR
 	{ AllocateBuffer, NULL,     NULL,             NULL,            NULL,            NULL,        NULL}, // STR_INIT	
   { NULL,           NULL,     NULL,             AppendCharacter, AdvancePointer,  NULL,        NULL}, // BUILDING
@@ -35,7 +35,7 @@ static strst_t const transitions[NSTR_STATES][NSTR_EVENTS] = {
 };
 
 // Finally, create an array of entry functions.
-static action_t const entries[NUMBER_OF_STATES] = {
+static action_t const entries[NSTR_STATES] = {
   NULL, NULL, NULL, NULL, NULL
 };
 
